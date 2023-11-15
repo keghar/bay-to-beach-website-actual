@@ -26,7 +26,7 @@ function Hero() {
         <p className=" align-middle text-md md:text-lg lg:text-xl max-w-prose tracking-wider leading-relaxed text-justify px-5">
           Your premier choice for pristine pool care in Gulf Shores, AL. Dive
           into unparalleled expertise and crystal-clear waters with our
-          dedicated team committed to keeping your oasis sparkling year-round."
+          dedicated team committed to keeping your oasis sparkling year-round.
         </p>
       </div>
     </section>
