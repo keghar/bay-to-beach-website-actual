@@ -1,5 +1,7 @@
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
+import Reviews from "@/components/Reviews";
 import Services from "@/components/Services";
 import Image from "next/image";
 
@@ -19,6 +21,8 @@ export default function Home() {
 
       <Hero />
       <Services />
+      <Reviews />
+      <Footer />
     </main>
   );
 }

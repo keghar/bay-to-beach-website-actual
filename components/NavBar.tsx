@@ -29,15 +29,15 @@ function NavBar() {
   return (
     <header
       className="flex flex-col pb-3 w-screen bg-white 
-    bg-transparent shadow-lg z-20 opacity-95">
+    bg-transparent shadow-lg z-20">
       <section className="h-fit fixed w-full bg-white shadow-md shadow-slate-200 rounded-md">
         <div className="">
           <div className="flex justify-center p-3 opcity-75">
             {/* contact and call button */}
 
-            <div className="basis-11/12 flex gap-2 w-fit">
+            <div className="basis-11/12 flex gap-2 w-fit justify-between">
               <Link href="/">
-                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-fit h-full shadow-md">
+                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-full h-full shadow-md">
                   <span className="text-xs text-center text-gray-800 font-semibold tracking-wide">
                     Contact us online
                   </span>
@@ -45,7 +45,7 @@ function NavBar() {
               </Link>
 
               <Link href="tel:+251-233-5491">
-                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-fit h-full shadow-md">
+                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-full h-full shadow-md">
                   <span className="text-xs text-gray-500 font-bold tracking-wide">
                     Call us
                   </span>
@@ -55,10 +55,10 @@ function NavBar() {
                 </div>
               </Link>
               {/* social links */}
-              <div className="basis-1/12 flex justify-center items-center gap-2">
+              <div className="basis-1/12 flex justify-end items-center gap-2">
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className=" text-blue-600"
+                  className=" text-gray-700"
                 />
                 <FontAwesomeIcon icon={faEnvelope} className="text-[#01b2c4]" />
               </div>
@@ -67,7 +67,7 @@ function NavBar() {
             {/* menu button*/}
 
             <div
-              className="basis-1/12 flex justify-end items-center pr-3"
+              className="basis-1/12 flex justify-end items-center pr-3 pl-3"
               onClick={handleNav}
               onKeyDown={handleNav}>
               {open ? (
@@ -75,14 +75,14 @@ function NavBar() {
                   icon={faXmark}
                   role="button"
                   tabIndex={0}
-                  className=""
+                  className="text-gray-800"
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={faBars}
                   role="button"
                   tabIndex={0}
-                  className="fas fa-bars"
+                  className="text-gray-800"
                 />
               )}
             </div>
