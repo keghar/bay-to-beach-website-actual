@@ -72,7 +72,7 @@ function Footer() {
                 </button>
 
                 <label className="hidden">
-                  Don't Fill this out if youre human:
+                  Dont Fill this out if youre human:
                   <input name="bot-field" />
                 </label>
               </form>
