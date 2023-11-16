@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex flex-col justify-center w-screen mx-auto outline-none">
       <NavBar />
 
-      <div className="flex justify-center mt-14">
+      <div className="flex justify-center mt-28">
         <Image
           src="/baytobeach-logo.jpeg"
           alt="logo"

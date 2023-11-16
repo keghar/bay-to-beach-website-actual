@@ -5,17 +5,31 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const [name, setName] = useState(false);
+
+  useEffect(() => {
+    const handleName = () => {
+      if (window.scrollY >= 200) {
+        setName(true);
+      } else {
+        setName(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleName);
+  });
+
   const handleNav = () => setOpen(!open);
 
   return (
     <header
       className="flex flex-col pb-3 w-screen bg-white 
-    bg-transparent shadow-lg z-20">
+    bg-transparent shadow-lg z-20 opacity-95">
       <section className="h-fit fixed w-full bg-white shadow-md shadow-slate-200 rounded-md">
         <div className="">
           <div className="flex justify-center p-3 opcity-75">
@@ -41,7 +55,7 @@ function NavBar() {
                 </div>
               </Link>
               {/* social links */}
-              <div className="basis-1/12 flex justify-center items-center gap-3 pl-2">
+              <div className="basis-1/12 flex justify-center items-center gap-2">
                 <FontAwesomeIcon
                   icon={faFacebookF}
                   className=" text-blue-600"
@@ -73,6 +87,18 @@ function NavBar() {
               )}
             </div>
           </div>
+          <div className={name ? "" : "hidden"}>
+            {open ? (
+              ""
+            ) : (
+              <div className="flex justify-center pb-2">
+                <span className="text-[#01b2c4] font-bold text-md">
+                  Bay to Beach Pools
+                </span>
+              </div>
+            )}
+          </div>
+
           {/* navigation links opens when navigation button is clicked */}
 
           {open ? (
