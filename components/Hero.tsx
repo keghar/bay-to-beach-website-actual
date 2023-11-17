@@ -25,7 +25,7 @@ function Hero() {
       </div>
 
       {/* Image md and lg screens */}
-      <div className="hidden md:flex basis-1/2 justify-center items-start w-full md:py-10">
+      {/* <div className="hidden md:flex basis-1/2 justify-center items-start w-full md:py-10">
         <Image
           className="w-screen -z-10 relative md:w-full md:rounded-l-full md:h-full md:object-fill md:-mr-1"
           src="/pool-img.jpeg"
@@ -33,7 +33,7 @@ function Hero() {
           height={300}
           width={300}
         />
-      </div>
+      </div> */}
 
       <div className=" bg-opacity-60 flex justify-center items-end -mb-14 z-10 md:basis-1/2 md:mb-0 md:bg-cyan-800 md:h-fit md:z-0 md:py-28 md:mr-4 md:rounded-r-3xl md:-ml-2">
         <h1 className=" align-middle text-md md:text-lg lg:text-xl max-w-prose tracking-wider leading-relaxed text-justify px-5 md:text-white md:">
