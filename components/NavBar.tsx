@@ -30,6 +30,7 @@ function NavBar() {
     <header
       className="flex flex-col pb-3 w-screen bg-white 
      shadow-lg z-20">
+      {/* Large Screen contact section */}
       <section className="hidden lg:flex justify-center lg:w-screen z-20 fixed text-gray-200 gap-0.5">
         <div className="basis-1/2 flex justify-center items-center text-xl bg-cyan-800 p-3 rounded-b-xl shadow-gray-500 shadow-md">
           <span>Contact us online</span>
@@ -38,14 +39,15 @@ function NavBar() {
           <span className="">Call us</span>
         </div>
       </section>
-      <section className="h-fit fixed w-full bg-white  shadow-slate-200 rounded-md pt-4 pb-3 lg:static lg:pt-16 ">
+
+      <section className="h-fit fixed w-full bg-white  shadow-slate-200 rounded-md pt-4 pb- lg:static lg:pt-16 ">
         <div className="">
           <div className="flex justify-center p-3 lg:justify-center :">
             {/* contact  */}
 
             <div className="basis-11/12 md:basis-none flex gap-2 w-fit justify-between ">
               <Link href="/">
-                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-full h-full shadow-md lg:hidden">
+                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-32 md:w-full h-full shadow-md lg:hidden">
                   <span className="text-xs text-center text-gray-800 font-semibold tracking-wide md:text-md lg:text-xl">
                     Contact us online
                   </span>
@@ -54,7 +56,7 @@ function NavBar() {
               {/* and call button */}
 
               <Link href="tel:+251-233-5491">
-                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-full h-full shadow-md lg:hidden">
+                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-32 md:w-full h-full shadow-md lg:hidden text-ellipsis">
                   <span className="text-xs text-gray-500 font-bold tracking-wide text-center md:text-md ">
                     Call us
                   </span>
