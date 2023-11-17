@@ -15,7 +15,7 @@ function Reviews() {
       <div className="flex flex-col gap-3 p-4">
         {/* Review 1 */}
 
-        <div className="flex flex-col bg-cyan-200 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400 gap-2">
+        <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400 gap-2">
           <div className="self-center flex gap-1 text-cyan-900">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
@@ -23,7 +23,7 @@ function Reviews() {
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
           </div>
-          <p className="italic text-cyan-700 tracking-wide">
+          <p className="italic text-cyan-900 tracking-wide">
             Bay To Beach Pools saved the day! We were scrambling to get our pool
             ready for a big family gathering, and their team swooped in with
             efficiency and expertise. Not only did they clean the pool
@@ -35,7 +35,7 @@ function Reviews() {
 
         {/* Review 2 */}
 
-        <div className="flex flex-col bg-cyan-400 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
+        <div className="flex flex-col bg-cyan-900 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
           <div className="self-center flex gap-1 text-cyan-900">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
@@ -43,7 +43,7 @@ function Reviews() {
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
           </div>
-          <p className="italic text-cyan-800 tracking-wide">
+          <p className="italic text-cyan-900 tracking-wide">
             Bay To Beach Pools saved the day! We were scrambling to get our pool
             ready for a big family gathering, and their team swooped in with
             efficiency and expertise. Not only did they clean the pool

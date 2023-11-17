@@ -14,7 +14,7 @@ function NavBar() {
 
   useEffect(() => {
     const handleName = () => {
-      if (window.scrollY >= 200) {
+      if (window.scrollY >= 50) {
         setName(true);
       } else {
         setName(false);
@@ -114,7 +114,7 @@ function NavBar() {
             {open ? (
               ""
             ) : (
-              <div className="flex justify-center pb-2 pt-2">
+              <div className="flex justify-center pb-2 pt-2 shadow-md shadow-gay-700">
                 <span className="text-[#01b2c4] font-bold text-md tracking-wide md:text-xl lg:text-3xl">
                   Bay to Beach Pools
                 </span>
