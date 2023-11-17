@@ -10,12 +10,13 @@ export default function Home() {
     <main className="flex flex-col justify-center w-screen mx-auto outline-none">
       <NavBar />
 
-      <div className="flex justify-center mt-28">
+      <div className="flex justify-center mt-16 lg:hidden">
         <Image
-          src="/baytobeach-logo.jpeg"
+          src="/baytobeach-logo.svg"
           alt="logo"
-          height={200}
-          width={200}
+          height={300}
+          width={300}
+          className=""
         />
       </div>
 

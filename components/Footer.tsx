@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
@@ -91,25 +95,40 @@ function Footer() {
                 height={200}
                 width={200}
                 alt="logo"
+                className="p-2"
               />
             </div>
           </div>
           {/* Links */}
 
           <div className=" flex flex-col justify-center items-center gap-3 p-3">
-            <h4>Links</h4>
-            <div className="flex gap-2 text-sm">
-              <span>Facbook</span>
-              <span>Email</span>
-              <span>Phone</span>
-            </div>
             <div className="flex flex-col justify-center items-center gap-1">
-              <h4>Cities We Service</h4>
-              <div className=" grid grid-cols-2 justify-center items-center text-xs text-center -m-2">
+              <h4 className="text-sm font-semibold text-cyan-900 tracking-wider">
+                Cities We Service
+              </h4>
+              <div className=" grid grid-cols-2 justify-center items-center text-xs text-gray-700 -ml-4 -mr-4">
                 <span className="text-center">Gulf Shores</span>
-                <span>Fort Morgan</span>
-                <span>Orange Beach</span>
-                <span>Foley</span>
+                <span className="text-center">Foley</span>
+                <span className="text-center">Orange Beach</span>
+                <span className="text-center">Fort Morgan</span>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-1 text-xs text-gray-700">
+              <div className="text-center">
+                {/* <FontAwesomeIcon
+                  icon={faFacebook}
+                  className=" text-gray-700 text-sm"
+                /> */}
+              </div>
+              <div className="flex flex-col gap-1 ">
+                <FontAwesomeIcon icon={faPhone} className="text-[#01b2c4]" />
+                <span className="text-center">251-555-5555</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <FontAwesomeIcon icon={faEnvelope} className="text-[#01b2c4]" />
+                <span className="tex-center -ml-4 -mr-4">
+                  baytobeachpoolsllc@gmail.com
+                </span>
               </div>
             </div>
           </div>

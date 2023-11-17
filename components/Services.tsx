@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Services() {
   return (
-    <section className="-mt-20 pb-5">
+    <section className=" pb-5">
       <h2 className="font-bold text-cyan-900 text-center text-3xl pb-5">
         Services
       </h2>
