@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import WidthWrapper from "@/components/WidthWrapper";
 
 config.autoAddCss = false;
 

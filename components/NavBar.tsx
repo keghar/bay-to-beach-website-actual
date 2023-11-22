@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import WidthWrapper from "./WidthWrapper";
+import MobileNav from "./MobileNav";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -28,19 +30,26 @@ function NavBar() {
 
   return (
     <header
-      className="flex flex-col pb-3 w-screen bg-white 
-     shadow-lg z-20">
+      className="flex flex-col lg:justify-center lg:w-full lg:mx-auto bg-white 
+     shadow-lg max-w-screen-2xl z-20">
       {/* Large Screen contact section */}
-      <section className="hidden lg:flex justify-center lg:w-screen z-20 fixed text-gray-200 gap-0.5">
-        <div className="basis-1/2 flex justify-center items-center text-xl bg-cyan-800 p-3 rounded-b-xl shadow-gray-500 shadow-md">
-          <span>Contact us online</span>
-        </div>
-        <div className="basis-1/2 bg-cyan-800 flex justify-center items-center text-xl rounded-b-xl shadow-gray-500 shadow-md">
-          <span className="">Call us</span>
-        </div>
-      </section>
 
-      <section className="h-fit fixed w-full bg-white  shadow-slate-200 rounded-md pt-4 pb- lg:static lg:pt-16 ">
+      <WidthWrapper>
+        <div className="hidden relative container max-w-screen-2xl lg:flex lg:justify-center bg-white">
+          <section className="hidden fixed max-w-screen-2xl lg:flex  lg:w-full  text-gray-800 gap-0.5 z-30 bg-white">
+            <div className="basis-1/2 flex justify-center items-center text-xl bg-[#01b2c4] p-3 rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
+              <span>Contact us online</span>
+            </div>
+            <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center text-xl rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
+              <span className="">
+                Call us at <span className="font-bold">251-555-5555</span>{" "}
+              </span>
+            </div>
+          </section>
+        </div>
+      </WidthWrapper>
+
+      <section className=" fixed w-full bg-white  shadow-gray-200 rounded-md pt-4 pb- lg:static lg:pt-16">
         <div className="">
           <div className="flex justify-center p-3 lg:justify-center :">
             {/* contact  */}
@@ -66,11 +75,16 @@ function NavBar() {
                 </div>
               </Link>
 
-              <div className="hidden lg:block lg:basis-1/4">
-                <span className="text-2xl">Logo</span>
+              <div className="hidden lg:flex lg:basis-1/4 lg:w-full">
+                <Image src="/bird-l.svg" alt="logo" height={50} width={50} />
+                <div className="flex flex-col justify-center itmes-center text-center -mx-2 text-lg text-cyan-800 font-bold font-serif">
+                  <span>Bay To Beach</span>
+                  <span> Pools</span>
+                </div>
               </div>
 
               {/* med and lg screen menu */}
+
               <div className="hidden md:flex md:justify-center md:items-center md:gap-3 text-sm text-center uppercase font-bold tracking-wide text-cyan-800 lg:basis-1/2 lg:text-2xl lg:gap-6 lg:justify-center">
                 <span className="w-1/3">About</span>
                 <span className="w-1/3">Services</span>
@@ -78,19 +92,20 @@ function NavBar() {
               </div>
 
               {/* social links */}
-              <div className="basis-1/12 flex justify-end items-center gap-2 md:justify-between lg:basis-1/4 lg:justify-end lg:gap-6 lg:text-3xl">
+              <div className="basis-1/12 flex justify-end items-center gap-2 text-lg md:justify-between lg:basis-1/4 lg:justify-end lg:gap-6 lg:text-3xl">
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className=" text-gray-700"
+                  className=" text-gray-600"
                 />
-                <FontAwesomeIcon icon={faEnvelope} className="text-[#01b2c4]" />
+                <FontAwesomeIcon icon={faEnvelope} className="text-gray-600" />
               </div>
             </div>
 
             {/* menu button*/}
 
             <div
-              className="basis-1/12 flex justify-end items-center pr-3 pl-3 md:hidden md:basis-0"
+              className="basis-1/12 flex justify-end items-center pr-3 pl-3 text-lg md:hidden md:basis-0 "
+              aria-hidden="false"
               onClick={handleNav}
               onKeyDown={handleNav}>
               {open ? (
@@ -98,14 +113,14 @@ function NavBar() {
                   icon={faXmark}
                   role="button"
                   tabIndex={0}
-                  className="text-gray-800"
+                  className="text-gray-600 outline-gray-300 text-xl"
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={faBars}
                   role="button"
                   tabIndex={0}
-                  className="text-gray-800"
+                  className="text-gray-600 outline-gray-300 "
                 />
               )}
             </div>
@@ -114,71 +129,33 @@ function NavBar() {
             {open ? (
               ""
             ) : (
-              <div className="flex justify-center pb-2 pt-2 shadow-md shadow-gay-700">
-                <span className="text-[#01b2c4] font-bold text-md tracking-wide md:text-xl lg:text-3xl">
+              <div className=" flex justify-around items-center shadow-lg shadow-gray-300 bg-white lg:fixed lg:max-w-screen-2xl lg:w-full lg:top-12 lg:pt-2">
+                <Image
+                  src="/bird-l.svg"
+                  alt="bird logo"
+                  height={30}
+                  width={30}
+                  className="pb-2"
+                />
+                <span className="text-[#01b2c4] font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
                   Bay to Beach Pools
                 </span>
+                <Image
+                  src="/bird-r.svg"
+                  alt="bird logo"
+                  height={30}
+                  width={30}
+                  className="pb-2"
+                />
               </div>
             )}
           </div>
 
           {/* navigation links opens when navigation button is clicked */}
 
-          {open ? (
-            <div className="h-screen flex flex-col justify-between items-center m-3.5 pb-72 pt-3.5">
-              <ul className="basis-1/2 flex flex-col justify-around items-center bg-white gap-5 mb-5">
-                <li className="text-center text-2xl text-cyan-800 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full  py-2 px-4 w-full">
-                  About
-                </li>
-                <li className="text-center text-2xl text-cyan-800 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full py-2 px-4 w-full">
-                  Services
-                </li>
-                <li className="text-center text-2xl text-gray-600 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full py-2 px-4 w-full">
-                  Testimonials
-                </li>
-              </ul>
-              <div className="basis-1/4 relative">
-                <Image
-                  src="/baytobeach-logo.jpeg"
-                  alt="logo"
-                  height={300}
-                  width={300}
-                />
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
+          {open ? <MobileNav /> : ""}
         </div>
       </section>
-      {/* 
-      <section id="medium" className={!open ? "hidden" : ""}>
-        <div className="flex pt-3 ">
-          <div className="basis-1/4 md:basis-1/3"> Logo </div>
-
-          <div className="basis-1/2 md:basis-1/3 flex justify-center">
-            <span className="md:text-2xl text-center text-blue-400">
-              Bay To Beach Pools
-            </span>
-          </div>
-
-          <div className="basis 1/4 md:basis-1/3 md:flex justify-center gap-2">
-            <ul>
-              <li>About</li>
-              <li>Services</li>
-              <li>Testimonials</li>
-            </ul>
-          </div>
-
-          <div className="basis-1/4md:basis-1/3 md:flex justify-center gap-2">
-            <ul>
-              <li>About</li>
-              <li>Services</li>
-              <li>Testimonials</li>
-            </ul>
-          </div>
-        </div>
-      </section> */}
     </header>
   );
 }

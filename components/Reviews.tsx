@@ -12,7 +12,7 @@ function Reviews() {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-3 p-4">
+      <div className="flex flex-col md:flex-row gap-3 p-4">
         {/* Review 1 */}
 
         <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400 gap-2">
