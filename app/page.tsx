@@ -1,9 +1,11 @@
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import LogoHeader from "@/components/LogoHeader";
 import NavBar from "@/components/NavBar";
 import Reviews from "@/components/Reviews";
 import Services from "@/components/Services";
+import Servicestwo from "@/components/Servicestwo";
 import WidthWrapper from "@/components/WidthWrapper";
 
 import Image from "next/image";
@@ -18,9 +20,10 @@ export default function Home() {
 
       <LogoHeader />
       <Hero />
-      <Services />
+      <Servicestwo />
 
       <Reviews />
+      <Contact />
       <Footer />
     </main>
   );

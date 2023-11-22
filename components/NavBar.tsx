@@ -38,12 +38,17 @@ function NavBar() {
         <div className="hidden relative container max-w-screen-2xl lg:flex lg:justify-center bg-white">
           <section className="hidden fixed max-w-screen-2xl lg:flex  lg:w-full  text-gray-800 gap-0.5 z-30 bg-white">
             <div className="basis-1/2 flex justify-center items-center text-xl bg-[#01b2c4] p-3 rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
-              <span>Contact us online</span>
+              <Link href="#contact">
+                <span>Contact us online</span>{" "}
+              </Link>
             </div>
+
             <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center text-xl rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
-              <span className="">
-                Call us at <span className="font-bold">251-555-5555</span>{" "}
-              </span>
+              <Link href="tel:251-233-5491">
+                <span className="">
+                  Call us at <span className="font-bold">251-233-5491</span>{" "}
+                </span>{" "}
+              </Link>
             </div>
           </section>
         </div>
@@ -55,7 +60,7 @@ function NavBar() {
             {/* contact  */}
 
             <div className="basis-11/12 md:basis-none flex gap-2 w-fit justify-between ">
-              <Link href="/">
+              <Link href="#contact">
                 <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-32 md:w-full h-full shadow-md lg:hidden">
                   <span className="text-xs text-center text-gray-800 font-semibold tracking-wide md:text-md lg:text-xl">
                     Contact us online
