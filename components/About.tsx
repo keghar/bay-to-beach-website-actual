@@ -20,10 +20,10 @@ function About() {
               {" "}
               Bay To Beach Pools
             </span>
-            , your premier partner in pristine pool care along the stunning Gulf
+            Your premier partner in pristine pool care along the stunning Gulf
             Shores, Alabama. With our expert team of dedicated professionals, we
             specialize in delivering top-tier cleaning and maintenance services
-            tailored to your pool's unique needs.
+            tailored to your pools unique needs.
           </p>
           <div className="md:basis-1/2 w-full">
             <ImageSliderTwo />
