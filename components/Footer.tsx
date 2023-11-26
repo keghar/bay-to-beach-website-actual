@@ -28,13 +28,13 @@ function Footer() {
             height={200}
             width={200}
             alt="logo"
-            className="-ml-2"
+            className="ml-4"
           />
         </div>
         {/* Links */}
 
-        <div className="md:basis-2/3 flex flex-col md:flex-row md:justify-around justify-center md:w-full items-center gap-3 -ml-4">
-          <div className="flex flex-col justify-center items-center gap-1">
+        <div className="md:basis-2/3 flex flex-col md:flex-row md:ml-4 md:justify-stretch justify-center md:w-full items-center gap-3 -ml-4">
+          <div className="flex flex-col justify-center items-center gap-1 md:basis-1/2 md:flex-1">
             <h4 className="text-sm font-semibold text-cyan-900 tracking-wider md:text-xl">
               Cities We Service
             </h4>
@@ -45,7 +45,7 @@ function Footer() {
               <span className="text-center">Fort Morgan</span>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-1 text-xs md:text-lg text-gray-700">
+          <div className="flex flex-col justify-center items-center gap-1 text-xs md:text-md lg:text-xl text-gray-700 md:basis-1/2">
             <div className="text-center">
               {/* <FontAwesomeIcon
                   icon={faFacebook}
