@@ -47,18 +47,17 @@ const products = [
 
 export default function Example() {
   return (
-    <section className="flex flex-col pb-5 w-full md:-mt-24 md:mb-4 lg:mb-8">
+    <section className="flex flex-col w-full md:mt-14 lg:mt-24">
       <WidthWrapper>
-        <h2 className="font-bold text-cyan-800 text-center text-3xl md:text-5xl pb-5 lg:text-6xl">
+        <h2 className="font-bold text-cyan-800 text-center text-3xl md:text-5xl mb-10 lg:text-6xl md:mb-24 lg:mb-32">
           Services
         </h2>
-        <div className="flex justify-center mx-auto items-center px-5 md:px-14 pb-3  max-w-prose lg:text-3xl">
-          <p className="text-md">
+        <div className="flex justify-center mx-auto items-center px-5 md:px-14 pb-5  max-w-prose lg:text-2xl">
+          <p className="text-md text-justify md:text-lg lg:text-2xl">
             Paragraph explaining your services! Filler text. Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Laudantium perferendis
             dolorem tempore quibusdam aspernatur iste, quisquam fuga accusantium
-            fugiat, culpa maiores id laborum ab voluptatibus odio sit cupiditate
-            error consectetur.
+            fugiat,
           </p>
         </div>
 
