@@ -28,7 +28,7 @@ function Footer() {
             height={200}
             width={200}
             alt="logo"
-            className="ml-4"
+            className="md:ml-4 mr-4 md:mr-0"
           />
         </div>
         {/* Links */}

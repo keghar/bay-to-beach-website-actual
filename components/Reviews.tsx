@@ -6,9 +6,11 @@ import WidthWrapper from "./WidthWrapper";
 
 function Reviews() {
   return (
-    <section className="flex flex-col justify-center items-center md:max-w-2xl lg:max-w-none w-full mx-auto mt-10 md:mt-24 lg:mt-32">
+    <section
+      id=""
+      className="flex flex-col justify-center items-center md:max-w-2xl lg:max-w-none w-full mx-auto mt-10 md:mt-24 lg:mt-32">
       <div className="flex">
-        <h2 className="font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-24 lg:mb-32 md:text-5xl lg:text-6xl">
+        <h2 className="font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-16 lg:mb-20 md:text-5xl lg:text-6xl">
           Reviews
         </h2>
       </div>

@@ -4,10 +4,10 @@ import WidthWrapper from "./WidthWrapper";
 function Contact() {
   return (
     <section
-      id="contact"
-      className="flex flex-col mx-auto items-center w-full max-w-screen-2xl md:mt-24 lg:mt-32">
+      id=""
+      className="flex flex-col mx-auto items-center w-full max-w-screen-2xl mt-10 md:mt-32 lg:mt-32">
       <div className="flex justify-center items-center">
-        <h2 className=" font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-24 lg:mb-32 md:text-5xl lg:text-6xl">
+        <h2 className=" font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-16 lg:mb-20 md:text-5xl lg:text-6xl">
           Contact Us
         </h2>
       </div>

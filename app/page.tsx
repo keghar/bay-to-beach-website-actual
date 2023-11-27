@@ -21,7 +21,7 @@ export default function Home() {
 
       <LogoHeader />
       <Hero />
-      <div className="relative -mt-10 mb-10">
+      <div className="relative mb-10 md:-mt-20 md:mb-16 lg:-mt-28 lg:mb-24">
         <div className="absolute inset-0 flex items-center" aria-hidden="true">
           <div className="w-full border-t border-gray-300" />
         </div>
@@ -34,8 +34,10 @@ export default function Home() {
       <About />
 
       <Servicestwo />
+      <div id="reviews"></div>
 
       <Reviews />
+      <div id="contact"></div>
       <Contact />
 
       <Footer />

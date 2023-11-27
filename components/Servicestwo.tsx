@@ -47,9 +47,9 @@ const products = [
 
 export default function Example() {
   return (
-    <section className="flex flex-col w-full md:mt-14 lg:mt-24">
+    <section id="services" className="flex flex-col w-full md:mt-14 lg:mt-24">
       <WidthWrapper>
-        <h2 className="font-bold text-cyan-800 text-center text-3xl md:text-5xl mb-10 lg:text-6xl md:mb-24 lg:mb-32">
+        <h2 className="font-bold text-cyan-800 text-center text-3xl md:text-5xl mb-10 lg:text-6xl md:mb-14 lg:mb-24">
           Services
         </h2>
         <div className="flex justify-center mx-auto items-center px-5 md:px-14 pb-5  max-w-prose lg:text-2xl">
@@ -62,11 +62,11 @@ export default function Example() {
         </div>
 
         <div className="bg-white">
-          <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-3 sm:gap-y-10 lg:grid-cols-3">
+          <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-screen-2xl lg:px-8">
+            <div className="mt-6 grid grid-cols-1 gap-8 gap-y-8 md:grid-cols-3 sm:gap-y-10 lg:grid-cols-3 xl:px-0">
               {products.map((product) => (
                 <div key={product.id} className="group relative">
-                  <div className="relative h-48 aspect-h-4 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
+                  <div className="relative h-48 lg:h-72 xl:h-80 aspect-h-4 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
                     <Image
                       src={product.imageSrc}
                       alt={product.imageAlt}

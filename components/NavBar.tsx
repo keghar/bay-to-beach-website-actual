@@ -82,27 +82,44 @@ function NavBar() {
 
               <div className="hidden lg:flex lg:basis-1/4 lg:w-full">
                 <Image src="/bird-l.svg" alt="logo" height={50} width={50} />
-                <div className="flex flex-col justify-center itmes-center text-center -mx-2 text-lg text-cyan-800 font-bold font-serif">
-                  <span>Bay To Beach</span>
-                  <span> Pools</span>
-                </div>
+                <Link href="/">
+                  {" "}
+                  <div className="flex flex-col justify-center itmes-center text-center -mx-2 text-lg text-cyan-800 font-bold font-serif">
+                    <span>Bay To Beach</span>
+                    <span> Pools</span>
+                  </div>
+                </Link>
               </div>
 
               {/* med and lg screen menu */}
 
               <div className="hidden md:flex md:justify-center md:items-center md:gap-3 text-sm text-center uppercase font-bold tracking-wide text-cyan-800 lg:basis-1/2 lg:text-2xl lg:gap-6 lg:justify-center">
-                <span className="w-1/3">About</span>
-                <span className="w-1/3">Services</span>
-                <span className="w-1/3">Reviews</span>
+                <Link href="#about">
+                  <span className="w-1/3">About</span>
+                </Link>
+                <Link href="#services">
+                  <span className="w-1/3">Services</span>
+                </Link>
+                <Link href="#reviews">
+                  <span className="w-1/3">Reviews</span>
+                </Link>
               </div>
 
               {/* social links */}
               <div className="basis-1/12 flex justify-end items-center gap-2 text-lg md:justify-between lg:basis-1/4 lg:justify-end lg:gap-6 lg:text-3xl">
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  className=" text-gray-600"
-                />
-                <FontAwesomeIcon icon={faEnvelope} className="text-gray-600" />
+                <Link href="https://www.facebook.com/profile.php?id=61552710876761">
+                  <FontAwesomeIcon
+                    icon={faFacebookF}
+                    className=" text-gray-600"
+                  />
+                </Link>
+                <Link href="mailto:baytobeachpoolsllc@gmail.com">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="text-gray-600"
+                  />
+                </Link>
               </div>
             </div>
 
@@ -142,9 +159,11 @@ function NavBar() {
                   width={30}
                   className="pb-2"
                 />
-                <span className="text-[#01b2c4] font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
-                  Bay to Beach Pools
-                </span>
+                <Link href="/">
+                  <span className="text-[#01b2c4] font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
+                    Bay to Beach Pools
+                  </span>
+                </Link>
                 <Image
                   src="/bird-r.svg"
                   alt="bird logo"
@@ -158,7 +177,37 @@ function NavBar() {
 
           {/* navigation links opens when navigation button is clicked */}
 
-          {open ? <MobileNav /> : ""}
+          {open ? (
+            <div className="relative h-screen flex flex-col justify-between items-center gap-10 pb-72 z-30">
+              <ul className="basis-1/2 flex flex-col justify-around items-center bg-white gap-10 mt-10 mb-5">
+                <Link href="#about" onClick={handleNav}>
+                  <li className="text-center text-2xl text-cyan-800 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full  py-2 px-4 w-full">
+                    about
+                  </li>
+                </Link>
+                <Link href="#services" onClick={handleNav}>
+                  <li className="text-center text-2xl text-cyan-800 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full py-2 px-4 w-full">
+                    Services
+                  </li>
+                </Link>
+                <Link href="#reviews" onClick={handleNav}>
+                  <li className="text-center text-2xl text-cyan-800 uppercase font-bold tracking-wider shadow-md shadow-gray-200 rounded-full py-2 px-4 w-full">
+                    Reviews
+                  </li>
+                </Link>
+              </ul>
+              <div className="basis-1/4 relative">
+                <Image
+                  src="/baytobeach-logo.svg"
+                  alt="logo"
+                  height={300}
+                  width={300}
+                />
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </section>
     </header>
