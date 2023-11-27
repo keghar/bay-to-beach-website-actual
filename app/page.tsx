@@ -13,7 +13,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center outline-none">
+    <main
+      id="top"
+      className="flex flex-col justify-center outline-none overflow-hidden">
       {/* <div className="opacity-40 -z-40">
         <Image src="/water.avif" alt="water background" fill className="" />
       </div> */}
