@@ -159,7 +159,7 @@ function NavBar() {
                   width={30}
                   className="pb-2"
                 />
-                <Link href="#top">
+                <Link href="/">
                   <span className="text-cyan-800 font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
                     Bay to Beach Pools
                   </span>
