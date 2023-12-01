@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import WidthWrapper from "./WidthWrapper";
 import Link from "next/link";
