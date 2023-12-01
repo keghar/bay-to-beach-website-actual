@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className="flex flex-col-reverse justify-center items-center w-full mx-auto mt-4 md:mt-0 md:pt-6 lg:mt-8">
       {/* Image Mobile and md */}
-      <div className=" flex justify-center items-start w-full md:mt-24 lg:-mt-20 lg:py-0">
+      <div className=" flex justify-center items-start w-full md:mt-24 lg:-mt-16 lg:py-0">
         <div
           className="bg-gradient-to-b from-white from-10% 
         via-transparent via-30% to-transparent -m-10 lg:bg-gradient-to-b lg:from-20% 

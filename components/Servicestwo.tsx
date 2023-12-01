@@ -48,7 +48,7 @@ const products = [
 
 export default function Example() {
   return (
-    <section id="services" className="flex flex-col w-full md:mt-14 lg:mt-24">
+    <section className="flex flex-col w-full md:mt-14 lg:mt-24">
       <WidthWrapper>
         <h2 className="font-bold text-cyan-800 text-center text-3xl md:text-5xl mb-10 lg:text-6xl md:mb-14 lg:mb-24">
           Services
@@ -94,6 +94,7 @@ export default function Example() {
                   <p className="mt-1 text-sm text-gray-500">
                     {product.message}
                   </p>
+                  <div id="reviews"></div>
                 </div>
               ))}
             </div>

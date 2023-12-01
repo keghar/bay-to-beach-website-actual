@@ -54,7 +54,7 @@ function NavBar() {
         </div>
       </WidthWrapper>
 
-      <section className=" fixed w-full bg-white  shadow-gray-200 rounded-md pt-4 pb- lg:static lg:pt-16">
+      <section className=" fixed w-full bg-white  shadow-gray-200 rounded-b-md pt-4 pb- lg:static lg:pt-16">
         <div className="">
           <div className="flex justify-center p-3 lg:justify-center :">
             {/* contact  */}
@@ -151,7 +151,7 @@ function NavBar() {
             {open ? (
               ""
             ) : (
-              <div className=" flex justify-around items-center shadow-lg shadow-gray-300 bg-white lg:fixed lg:max-w-screen-2xl lg:w-full lg:top-12 lg:pt-2">
+              <div className=" flex justify-around items-center shadow-lg shadow-gray-300 bg-white lg:fixed lg:max-w-screen-2xl lg:w-full lg:top-12 lg:pt-2 rounded-b-xl">
                 <Image
                   src="/bird-l.svg"
                   alt="bird logo"
@@ -160,7 +160,7 @@ function NavBar() {
                   className="pb-2"
                 />
                 <Link href="#top">
-                  <span className="text-[#01b2c4] font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
+                  <span className="text-cyan-800 font-bold text-md tracking-wide pb-2 md:text-xl font-serif lg:text-3xl">
                     Bay to Beach Pools
                   </span>
                 </Link>

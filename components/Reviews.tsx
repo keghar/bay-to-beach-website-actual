@@ -77,10 +77,11 @@ function Reviews() {
         </div>
 
         <Link href="/">
-          <div className="flex justify-center items-center bg-none border border-[#01b2c4] p-2 rounded-full w-36 h-12 mx-auto mt-2 md:mt-6 ">
+          <div className="flex justify-center items-center bg-none border border-[#01b2c4] p-2 rounded-full w-36 h-12 mx-auto mt-4 md:mt-6 ">
             <span className="text-center text-md uppercase tracking-wide">
               See more
             </span>
+            <div id="contact"></div>
           </div>
         </Link>
       </WidthWrapper>
