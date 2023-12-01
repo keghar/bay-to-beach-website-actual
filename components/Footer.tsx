@@ -20,7 +20,7 @@ function Footer() {
         </div>
       </div>
       {/* Footer logo and links */}
-      <section className=" flex justify-between items-center md:justify-center w-full">
+      <section className=" flex justify-between items-center flex-col-reverse md:flex-row md:justify-center w-full mt-8">
         {/* Logo */}
         <div className="basis-1/2 md:basis-1/3 flex justify-start">
           <Image
@@ -28,23 +28,23 @@ function Footer() {
             height={200}
             width={200}
             alt="logo"
-            className=" md:ml-6  md:mr-8"
+            className=""
           />
         </div>
         {/* Links */}
-        <div className="md:basis-2/3 flex flex-col md:flex-row md:ml-4 md:justify-stretch justify-center md:w-full items-center gap-3 -ml-4 mt-">
+        <div className="md:basis-2/3 flex flex-col md:flex-row  md:justify-stretch justify-center md:w-full items-center">
           <div className="flex flex-col justify-center items-center gap-1 md:basis-1/2 md:flex-1">
             <h4 className="text-sm font-semibold text-cyan-900 tracking-wider md:text-xl">
               Cities We Service
             </h4>
-            <div className=" grid grid-cols-1 justify-center md:grid-col-1 md:flex md:flex-col items-center text-xs md:text-lg text-gray-700 -ml-6 -mr-6">
+            <div className=" grid grid-cols-1 justify-center  md:flex md:flex-col items-center text-xs md:text-base text-gray-700">
               <span className="text-center">Gulf Shores</span>
               <span className="text-center">Foley</span>
               <span className="text-center">Orange Beach </span>{" "}
               <span className="text-center">Fort Morgan</span>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-1 text-xs md:text-base lg:text-xl text-gray-700 md:basis-1/2">
+          <div className="flex flex-col justify-center items-center gap-3 text-xs md:text-base lg:text-xl text-gray-700 md:basis-1/2">
             <div className="text-center">
               {/* <FontAwesomeIcon
                   icon={faFacebook}
@@ -54,13 +54,13 @@ function Footer() {
 
             <Link href="tel:251-233-5491">
               {" "}
-              <div className="flex flex-col gap-1 ">
+              <div className="flex md:flex-col gap-1 ">
                 <FontAwesomeIcon icon={faPhone} className="text-[#01b2c4]" />
-                <span className="text-center">251-233-5491</span>
+                <span className="text-center"> 251-233-5491</span>
               </div>
             </Link>
             <Link href="mailto:baytobeachpoolsllc@gmail.com">
-              <div className="flex flex-col gap-1">
+              <div className="flex md:flex-col gap-1">
                 <FontAwesomeIcon icon={faEnvelope} className="text-[#01b2c4]" />
                 <span className="text-center ">
                   baytobeachpoolsllc@gmail.com
@@ -71,7 +71,7 @@ function Footer() {
               <div>
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  size="lg"
+                  size="2x"
                   className="text-[#0966ff]"
                 />
               </div>
