@@ -24,7 +24,7 @@ function Footer() {
         {/* Logo */}
         <div className="basis-1/2 md:basis-1/3 flex justify-start">
           <Image
-            src="/baytobeach-logo.svg"
+            src="/btb-logo.png"
             height={200}
             width={200}
             alt="logo"
@@ -72,7 +72,7 @@ function Footer() {
                 <FontAwesomeIcon
                   icon={faFacebook}
                   size="2x"
-                  className="text-[#0966ff]"
+                  className="text-cyan-800"
                 />
               </div>
             </Link>
@@ -80,12 +80,10 @@ function Footer() {
         </div>
       </section>
       <div className="flex flex-col justify-center mt-2">
-        <span className=" text-gray-500 text-xs text-center m-auto">
-          Copyright &copy; 2024 Bay To Beach Pools LLC
+        <span className=" text-gray-500 text-xs text-center m-auto mt-4">
+          Copyright &copy; {new Date().getFullYear()} Bay To Beach Pools LLC
         </span>
-        <span className="text-gray-500 text-xs text-center m-auto">
-          Design by
-        </span>
+        <span className="text-gray-500 text-xs text-center m-auto"></span>
       </div>
     </footer>
   );

@@ -1,74 +1,62 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronCircleRight,
-  faChevronCircleLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from "react";
 
-function ImageSlider() {
-  const slides = [
-    {
-      src: "/poolimg.jpeg",
-    },
-    {
-      src: "/poolcleaning.jpeg",
-    },
-    {
-      src: "/handyman.jpeg",
-    },
-  ];
-  const [currentIndex, setCurrentIndex] = useState(0);
+const images = [
+  "/pool1.jpg",
+  "/pool2.jpg",
+  "/pool3.jpg",
+  "/pool4.jpg",
+  "/pool5.jpg",
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+  // Add more image URLs as needed
+];
+
+const Carousel = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prevImage) =>
+      prevImage === images.length - 1 ? 0 : prevImage + 1
+    );
   };
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const prevImage = () => {
+    setCurrentImage((prevImage) =>
+      prevImage === 0 ? images.length - 1 : prevImage - 1
+    );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="w-full">
-      <div className="relative flex flex-col justify-between p-2 items-center">
-        {/* Left arrow */}
-        <div className=" text-2xl rounded-full p-2 cursor-pointer">
-          <FontAwesomeIcon
-            icon={faChevronCircleLeft}
-            role="button"
-            tabIndex={0}
-            className="text-gray-600 outline-gray-300 text-xl"
-            onClick={prevSlide}
-          />
-        </div>
-
-        <div className=" h-56">
-          <Image
-            src={slides[currentIndex].src}
-            fill
-            alt="logo"
-            sizes="100vw"
-            className="content-contain"
-          />
-        </div>
-        {/* right arrow */}
-        <div className="text-2xl text-gray-200 rounded-full p-2 cursor-pointer">
-          <FontAwesomeIcon
-            icon={faChevronCircleRight}
-            role="button"
-            tabIndex={0}
-            className="text-gray-600 outline-gray-300 text-xl"
-            onClick={nextSlide}
-          />
-        </div>
+    <div className="relative overflow-hidden w-full md:w-full lg:w-full h-full rounded-2xl">
+      <div className="h-72 md:h-80 lg:h-96 relative w-full ">
+        <Image
+          src={images[currentImage]}
+          alt="Pools we work on"
+          fill
+          className="object-cover w-full"
+        />
+        <button
+          onClick={prevImage}
+          className="absolute inset-y-0 left-0 flex items-center justify-center w-7 h-full text-gray-200 hover:bg-opacity-75 focus:outline-none">
+          &lt;
+        </button>
+        <button
+          onClick={nextImage}
+          className="absolute inset-y-0 right-0 flex items-center justify-center w-7 h-full text-gray-200 hover:bg-opacity-75 focus:outline-none">
+          &gt;
+        </button>
       </div>
     </div>
   );
-}
+};
 
-export default ImageSlider;
+export default Carousel;

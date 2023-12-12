@@ -5,10 +5,11 @@ function LogoHeader() {
   return (
     <div className="relative h-56 flex justify-center items-center mt-20 lg:hidden">
       <Image
-        src="/baytobeach-logo.svg"
+        src="/btb-logo.png"
         alt="logo"
         fill
         className="h-full object-contain"
+        priority
       />
     </div>
   );

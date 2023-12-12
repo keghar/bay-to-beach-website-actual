@@ -198,8 +198,8 @@ function NavBar() {
               </ul>
               <div className="basis-1/4 relative">
                 <Image
-                  src="/baytobeach-logo.svg"
-                  alt="logo"
+                  src="/btb-logo.png"
+                  alt="Bay to Beach Pools logo"
                   height={300}
                   width={300}
                 />
