@@ -8,6 +8,7 @@ const images = [
   "/pool3.jpg",
   "/pool4.jpg",
   "/pool5.jpg",
+  "/pool6.jpg",
 
   // Add more image URLs as needed
 ];
