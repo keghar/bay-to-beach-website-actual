@@ -39,14 +39,18 @@ function NavBar() {
           <section className="hidden fixed max-w-screen-2xl lg:flex  lg:w-full  text-gray-800 gap-0.5 z-30 bg-white">
             <div className="basis-1/2 flex justify-center items-center text-xl bg-[#01b2c4] p-3 rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
               <Link href="#contact">
-                <span>Contact us online</span>{" "}
+                <span className="font-bold">Contact us online</span>{" "}
               </Link>
             </div>
 
-            <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center text-xl rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500">
+            <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center text-xl rounded-b-xl shadow-gray-300 shadow-md hover:bg-gradient-to-bl from-[#01b2c4] to-cyan-500 text-center leading-tight">
               <Link href="tel:251-233-5491">
-                <span className="">
-                  Call us at <span className="font-bold">251-233-5491</span>{" "}
+                <span className="mx-auto text-center font-bold">
+                  Call or text us at
+                  <br />
+                  <span className="font-bol text-center">
+                    251-233-5491 | 225-571-7220
+                  </span>
                 </span>{" "}
               </Link>
             </div>
@@ -61,7 +65,7 @@ function NavBar() {
 
             <div className="basis-11/12 md:basis-none flex gap-2 w-fit justify-between ">
               <Link href="#contact">
-                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-32 md:w-full h-full shadow-md lg:hidden">
+                <div className="basis-1/2 bg-[#01b2c4] flex justify-center items-center px-3 py-1 rounded-full w-32 md:w-40 h-full shadow-md lg:hidden">
                   <span className="text-xs text-center text-gray-800 font-semibold tracking-wide md:text-md lg:text-xl">
                     Contact us online
                   </span>
@@ -70,13 +74,11 @@ function NavBar() {
               {/* and call button */}
 
               <Link href="tel:+251-233-5491">
-                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-32 md:w-full h-full shadow-md lg:hidden text-ellipsis">
-                  <span className="text-xs text-gray-500 font-bold tracking-wide text-center md:text-md ">
-                    Call us
+                <div className="basis-1/2 border border-[#01b2c4] flex flex-col py-1 px-3 rounded-full items-center w-32 md:w-40 h-full shadow-md lg:hidden text-ellipsis">
+                  <span className="text-xs text-gray-500 font-bold tracking-wide text-center md:text-md items-center">
+                    Call or <br /> Text us
                   </span>
-                  <span className="text-xs text-gray-500 font-bold tracking-wide md:text-md">
-                    251-233-5491
-                  </span>
+                  <span className="text-xs text-gray-500 font-bold tracking-wide md:text-md"></span>
                 </div>
               </Link>
 
@@ -107,13 +109,17 @@ function NavBar() {
 
               {/* social links */}
               <div className="basis-1/12 flex justify-end items-center gap-2 text-lg md:justify-between lg:basis-1/4 lg:justify-end lg:gap-6 lg:text-3xl">
-                <Link href="https://www.facebook.com/profile.php?id=61552710876761">
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61552710876761"
+                  aria-label="Our Facebook page">
                   <FontAwesomeIcon
                     icon={faFacebookF}
                     className=" text-gray-600"
                   />
                 </Link>
-                <Link href="mailto:baytobeachpoolsllc@gmail.com">
+                <Link
+                  href="mailto:baytobeachpoolsllc@gmail.com"
+                  aria-label="Email us">
                   {" "}
                   <FontAwesomeIcon
                     icon={faEnvelope}

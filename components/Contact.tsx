@@ -4,6 +4,7 @@ import WidthWrapper from "./WidthWrapper";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import Image from "next/image";
 
 function Contact() {
   interface FormData {
@@ -31,7 +32,7 @@ function Contact() {
 
   // Please update the Access Key in the .env
   const apiKey =
-    process.env.PUBLIC_ACCESS_KEY || "474d37c4-10dc-49b5-9ab0-684e0a233974";
+    process.env.PUBLIC_ACCESS_KEY || "ea0ddc26-5837-4287-b1fb-c90a551dd0db";
 
   const onHCaptchaChange = (token: string | boolean) => {
     if (typeof token === "string") {
@@ -44,7 +45,7 @@ function Contact() {
     access_key: apiKey,
     settings: {
       from_name: "",
-      subject: "New Contact Message from your Website",
+      subject: "New Form Submission from your Website",
     },
     onSuccess: (message, data) => {
       setIsSuccess(true);
@@ -59,14 +60,15 @@ function Contact() {
   return (
     <section
       id=""
-      className="flex flex-col mx-auto items-center w-full max-w-screen-2xl mt-10 md:mt-32 lg:mt-32">
+      className="flex flex-col mx-auto px-4 items-center w-full max-w-screen-2xl mt-10 md:mt-32 lg:mt-32">
       <div className="flex justify-center items-center">
-        <h2 className=" font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-16 lg:mb-20 md:text-5xl lg:text-6xl">
+        <h2 className=" font-bold text-cyan-900 text-center text-3xl mb-10 md:mb-16 lg:mb-20 md:text-5xl lg:text-3xl">
           Contact Us
         </h2>
       </div>
-      <WidthWrapper>
-        <div className="max-w-xl flex flex-col mx-auto px-4  w-full text-left justify-center">
+
+      <div className="max-w-xl flex flex-col mx-auto px-4  w-full text-left justify-center lg:flex-row lg:mx-0 lg:px-0 lg:max-w-full lg:justify-around">
+        <div className="flex flex-col basis-1/2 max-w-lg">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col">
               <label
@@ -234,7 +236,15 @@ function Contact() {
             )}
           </form>
         </div>
-      </WidthWrapper>
+        <div className="h-[400px] md:h-[650px] relative w-auto mt-10 lg:mt-0 flex lg:basis-1/2 lg:max-w-lg">
+          <Image
+            src="/team-photo.jpeg"
+            alt="Photo of the owners"
+            fill
+            className="object-cover rounded-2xl"
+          />
+        </div>
+      </div>
     </section>
   );
 }

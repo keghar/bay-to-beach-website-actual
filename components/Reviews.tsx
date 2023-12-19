@@ -16,10 +16,10 @@ function Reviews() {
         </h2>
       </div>
       <WidthWrapper>
-        <div className="flex flex-col justify-center lg:flex-row gap-3 md:gap-10 lg:gap-8 px-4 md:px-6">
+        <div className="flex flex-col justify-center lg:flex-row gap-3 md:gap-10 lg:gap-8 px-4 mx-4 md:px-6">
           {/* Review 1 */}
 
-          <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400 gap">
+          {/* <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400 gap">
             <div className="self-center flex gap-1 text-cyan-900">
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
@@ -35,11 +35,11 @@ function Reviews() {
               maintenance tips. Super friendly and professional. Highly
               recommend their services!
             </p>
-          </div>
+          </div> */}
 
           {/* Review 2 */}
 
-          <div className="flex flex-col bg-cyan-900 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
+          {/* <div className="flex flex-col bg-cyan-900 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
             <div className="self-center flex gap-1 text-cyan-900">
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
@@ -55,9 +55,9 @@ function Reviews() {
               maintenance tips. Super friendly and professional. Highly
               recommend their services!
             </p>
-          </div>
+          </div> */}
           {/* Review 3 */}
-          <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
+          {/* <div className="flex flex-col bg-cyan-800 bg-opacity-10 p-3 rounded-xl shadow-md shadow-gray-400">
             <div className="self-center flex gap-1 text-cyan-900">
               <FontAwesomeIcon icon={faStar} />
               <FontAwesomeIcon icon={faStar} />
@@ -73,17 +73,18 @@ function Reviews() {
               maintenance tips. Super friendly and professional. Highly
               recommend their services!
             </p>
-          </div>
+          </div> */}
         </div>
-
-        <Link href="/">
-          <div className="flex justify-center items-center bg-none border border-[#01b2c4] p-2 rounded-full w-36 h-12 mx-auto mt-4 md:mt-6 ">
-            <span className="text-center text-md uppercase tracking-wide">
-              See more
-            </span>
-            <div id="contact"></div>
-          </div>
-        </Link>
+        <div className="flex flex-col mx-4">
+          <Link href="/" className="">
+            <div className="flex justify-center items-center bg-none border border-[#01b2c4] p-2 rounded-full w-full mx-auto max-w-xl h-12 mt-4 md:mt-6  ">
+              <span className="text-center text-md font-bold uppercase tracking-wide">
+                Comming soon
+              </span>
+              <div id="contact"></div>
+            </div>
+          </Link>
+        </div>
       </WidthWrapper>
     </section>
   );

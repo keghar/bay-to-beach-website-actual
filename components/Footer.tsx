@@ -34,9 +34,9 @@ function Footer() {
         {/* Links */}
         <div className="md:basis-2/3 flex flex-col md:flex-row  md:justify-stretch justify-center md:w-full items-center">
           <div className="flex flex-col justify-center items-center gap-1 md:basis-1/2 md:flex-1">
-            <h4 className="text-sm font-semibold text-cyan-900 tracking-wider md:text-xl">
+            <p className="text-sm font-semibold text-cyan-900 tracking-wider md:text-xl">
               Cities We Service
-            </h4>
+            </p>
             <div className=" grid grid-cols-1 justify-center  md:flex md:flex-col items-center text-xs md:text-base text-gray-700">
               <span className="text-center">Gulf Shores</span>
               <span className="text-center">Foley</span>
@@ -50,27 +50,32 @@ function Footer() {
                   icon={faFacebook}
                   className=" text-gray-700 text-sm"
                 /> */}
-            </div>
-
-            <Link href="tel:251-233-5491">
-              {" "}
-              <div className="flex md:flex-col gap-1 ">
-                <FontAwesomeIcon icon={faPhone} className="text-[#01b2c4]" />
-                <span className="text-center"> 251-233-5491</span>
+            </div>{" "}
+            <div className="flex md:flex-col gap-2 items-center">
+              <FontAwesomeIcon icon={faPhone} className="text-[#01b2c4]" />
+              <div className="flex flex-col py-2 gap-1">
+                <Link href="tel:251-233-5491">
+                  {" "}
+                  <span className="text-center"> 251-233-5491</span>
+                </Link>
+                <Link href="tel:225-571-7220">
+                  {" "}
+                  <span className="text-center"> 225-571-7220</span>
+                </Link>
               </div>
-            </Link>
+            </div>
             <Link href="mailto:baytobeachpoolsllc@gmail.com">
-              <div className="flex md:flex-col gap-1">
+              <div className="flex md:flex-col items-center gap-2">
                 <FontAwesomeIcon icon={faEnvelope} className="text-[#01b2c4]" />
-                <span className="text-center ">
+                <span className="text-center py-2">
                   baytobeachpoolsllc@gmail.com
                 </span>
               </div>
             </Link>
-            <Link href="https://www.facebook.com">
+            <Link href="https://www.facebook.com" aria-label="Facebook Page">
               <div>
                 <FontAwesomeIcon
-                  icon={faFacebook}
+                  icon={faFacebookF}
                   size="2x"
                   className="text-cyan-800"
                 />

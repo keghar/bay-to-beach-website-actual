@@ -9,6 +9,8 @@ const images = [
   "/pool4.jpg",
   "/pool5.jpg",
   "/pool6.jpg",
+  "/cleaning.jpeg",
+  "/testing.jpeg",
 
   // Add more image URLs as needed
 ];
@@ -38,7 +40,7 @@ const Carousel = () => {
 
   return (
     <div className="relative overflow-hidden w-full md:w-full lg:w-full h-full rounded-2xl">
-      <div className="h-72 md:h-80 lg:h-96 relative w-full ">
+      <div className="h-80 md:h-80 lg:h-96 relative w-full ">
         <Image
           src={images[currentImage]}
           alt="Pools we work on"

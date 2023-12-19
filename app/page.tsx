@@ -56,7 +56,7 @@ export default function Home() {
       <Contact />
 
       <div className="flex flex-col justify-center items-center text-cyan-800 text-xl uppercase mt-20 gap-10">
-        <h4>Proud members of</h4>
+        <p>Proud members of</p>
         <Link href="https://www.southbaldwinchamber.com/">
           <Image
             src="/sbcoc-logo.jpeg"
