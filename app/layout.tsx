@@ -12,6 +12,7 @@ config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://baytobeachpools.com/"),
   title: "Bay To Beach Pools || Gulf Shores, AL",
   description: "Pool Cleaner Gulf Shores, Alabama",
 };
