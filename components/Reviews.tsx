@@ -79,7 +79,7 @@ function Reviews() {
           <Link href="/" className="">
             <div className="flex justify-center items-center bg-none border border-[#01b2c4] p-2 rounded-full w-full mx-auto max-w-xl h-12 mt-4 md:mt-6  ">
               <span className="text-center text-md font-bold uppercase tracking-wide">
-                Comming soon
+                Coming soon
               </span>
               <div id="contact"></div>
             </div>
